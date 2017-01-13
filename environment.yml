@@ -1,6 +1,6 @@
 name: app
 dependencies:
 - Flask=0.11.1
-- freetds=1.00.9
 - gunicorn=19.1.0
 - pyodbc=3.0.10
+- unixodbc=2.3.4

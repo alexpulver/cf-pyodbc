@@ -1,0 +1,12 @@
+#!/bin/sh
+
+curl ftp://ftp.freetds.org/pub/freetds/stable/freetds-1.00.24.tar.gz | 
+    tar -xzv --directory /tmp
+cd /tmp/freetds-1.00.24
+./configure \
+    --prefix=$BUILD_DIR/vendor \
+    --with-tdsver=7.4 \
+    --with-odbc-nodm=$BUILD_DIR/.conda/envs/dep_env \
+    --with-openssl
+make
+make install
