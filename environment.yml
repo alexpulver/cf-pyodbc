@@ -1,0 +1,5 @@
+name: app
+dependencies:
+- pyodbc=3.0.10
+- gunicorn=19.1.0
+- Flask=0.11.1
