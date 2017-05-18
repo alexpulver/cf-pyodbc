@@ -1,1 +1,6 @@
-buildpack: https://github.com/alexpulver/python-buildpack.git
+buildpack: https://github.com/cloudfoundry/buildpack-python.git#v1.5.18
+env:
+    TDSVER: 7.4
+    ODBCSYSINI: /app/config
+services:
+    - mssql
