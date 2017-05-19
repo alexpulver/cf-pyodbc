@@ -1,6 +1,10 @@
-FROM python:2.7.13
+FROM python:2.7.13-slim
 
-RUN apt-get update && apt-get install -y unixodbc-dev
+RUN apt-get update && apt-get install -y \
+	build-essential \
+	libssl-dev \
+	unixodbc-dev \
+	wget
 
 RUN mkdir -p /app
 
