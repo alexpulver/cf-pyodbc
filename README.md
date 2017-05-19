@@ -5,10 +5,10 @@ cf cups mssql -p '{"server":"HOST","port":"PORT","uid":"UID","pwd":"PASSWORD","d
 
 To build and run the Docker image:
 ```
-docker build -t cf-conda-pyodbc .
+docker build -t cf-pyodbc .
 docker run -p 8000:8000 -d \
 	-e TDSVER=7.4 \
 	-e ODBCSYSINI=/app/config \
 	-e VCAP_SERVICES='{"user-provided":[{"credentials":{"server":"SERVER","port":"PORT","uid":"UID","pwd":"PWD","database":"DATABASE"},"name":"mssql"}]}' \
-	cf-conda-pyodbc
+	cf-pyodbc
 ```
