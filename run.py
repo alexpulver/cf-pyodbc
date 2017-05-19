@@ -22,7 +22,7 @@ def index():
         'uid': app.config['MSSQL_UID'],
         'pwd': app.config['MSSQL_PWD'],
         'database': app.config['MSSQL_DATABASE']
-    }  
+    }
     
     connection = pyodbc.connect(**db_config)  
     cursor = connection.cursor()  
